@@ -1,0 +1,22 @@
+.home-h{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f76c6c;
+    color: #ffffff;
+    margin-top: 80px;
+    font-size: 90px;
+}
+
+.home-txt{
+    font-size: x-large;
+    color: #24305e;
+}
+
+.home-txt1{
+    font-size: larger;
+    color: #24305e;
+}
+
+.home-img1{
+    margin-top: -80px;
+    margin-left: 20px;
+}
