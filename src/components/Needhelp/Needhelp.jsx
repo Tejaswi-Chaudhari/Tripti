@@ -1,9 +1,6 @@
 import React from 'react'
 import './needhelp.css'
 import gif1 from "../../media/gif1.gif"
-
-
-
 import { Button, Form, Col, Image, Row } from "react-bootstrap";
 
 const Needhelp = () => {

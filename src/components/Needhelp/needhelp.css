@@ -1,21 +1,16 @@
-
 .container-ele{
     top:0;
     bottom:0;
-    position:absolute;
+    right: 0;
+    left: 0;
     width:100%;
     height:100%;
     background-color: #fcd5d5;
-    
 }
 
-.container-ele{
-    
+.container-ele{    
     display: flex;
 }
-
-
-
 
 .form-ele {
     margin-top: 50px;
@@ -23,7 +18,6 @@
     display: inline-block;
     height: 200px;
     width: 80%;
-   
   }
   
   .form-grp{
@@ -32,8 +26,6 @@
 
 .button-ele{
     margin-top: 10px;
-   
-    
     border: 2px solid #465283;
     width: 100%;
     cursor: pointer;
@@ -41,14 +33,9 @@
 }
 
 .button-ele:hover{
-    
     background-color: #405092;
 }
 
 .form-Control-el{
     border: 2px solid #24305e;
-}
-
-.btn{
-    background-color: #374785;
 }
