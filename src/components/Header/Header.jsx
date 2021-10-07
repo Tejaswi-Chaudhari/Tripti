@@ -8,15 +8,15 @@ import Button from 'react-bootstrap/Button'
 const Header = () => {
     return (
         <div>
-            <Navbar className="nav-whole">
+            <Navbar fixed="top" className="nav-whole">
                 <Container className="nav-c">
                     <Navbar.Brand href="a" className="nav-brand">Tripti</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav className="nav">
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="nav me-auto">
                             <Nav.Link href="a" className="nav-txt-rd">Add Food</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">Need Food</Nav.Link>
-                            <Nav.Link href="a" className="nav-txt-rd">Causes worth donating</Nav.Link>
+                            <Nav.Link href="a" className="nav-txt-rd">Donate</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">NGOs</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">Government Schemes</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">Give them a treat</Nav.Link>

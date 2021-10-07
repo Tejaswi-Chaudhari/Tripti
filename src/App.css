@@ -4,6 +4,5 @@
     top: 0;
     bottom: 0;
     position: absolute;
-    overflow: hidden;
-    background-color: #ffffff;
+    overflow-x: hidden;
 }

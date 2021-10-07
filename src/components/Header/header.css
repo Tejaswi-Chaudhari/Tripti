@@ -7,7 +7,7 @@
 .nav-whole .nav-c .nav-brand {
     color: #ffffff;
     font-weight: 500;
-    font-size: x-large;
+    font-size: 30px;
     font-family: 'Dancing Script', cursive;
 }
 .nav-whole .nav-c .nav-brand:hover {
@@ -25,7 +25,7 @@
     background-color: #24305e;
     opacity: 0.8;
     border-color: #ffffff;
-    margin-left: 100px;
+    margin-left: 200px;
 }
 .btn-login:hover{
     background-color: #ffffff;

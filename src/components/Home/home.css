@@ -1,7 +1,7 @@
 .home-h{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #f76c6c;
-    color: #ffffff;
+    color: transparent;
     margin-top: 80px;
     font-size: 90px;
 }
@@ -19,4 +19,25 @@
 .home-img1{
     margin-top: -80px;
     margin-left: 20px;
+    z-index: -1;
+}
+
+.home-blob1{
+    position: absolute;
+    width: 700px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.home-blob2{
+    position: absolute;
+    width: 200px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.home-blob3{
+    width: 120px;
+    margin-left: 1200px;
+    opacity: 0.5;
 }
