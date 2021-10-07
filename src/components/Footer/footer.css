@@ -2,6 +2,9 @@
     padding-top: 40px;
     background-color: #24305e;
     padding-bottom: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer .footer-li{

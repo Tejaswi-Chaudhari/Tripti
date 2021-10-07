@@ -1,0 +1,26 @@
+/* .addfood{
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.control-el{
+    border-color: #24305e;
+}
+*/
+
+.button-el{
+  color: white;
+  border-color:#24305e;
+  background-color:#bce8eb;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.button-el:hover{
+  background-color: #405092;
+  color: #ffffff;
+}
+
+.img1-el{
+  width:30%;
+} 

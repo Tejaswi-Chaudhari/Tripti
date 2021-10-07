@@ -27,7 +27,7 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
-            <h4>Latitude : {l1}<br></br>Longitude : {l2}</h4>
+         
         </div>
     )
 }
