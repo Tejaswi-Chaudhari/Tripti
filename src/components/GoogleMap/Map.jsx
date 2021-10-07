@@ -27,9 +27,6 @@ export default function Map() {
             console.log(error);
         })
 
-
-
-
     return (
         //     <button onClick={getlocate}>Click</button>
         <ReactMapGL
