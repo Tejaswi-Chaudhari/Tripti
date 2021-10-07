@@ -1,8 +1,5 @@
 import React from 'react'
 import './ngo.css'
-// import img1 from "../../media/img1.jpg"
-
-// import { Button, Form, Col, Image } from "react-bootstrap";
 
 const Ngo = () => {
     return (

@@ -1,3 +1,13 @@
+.needhelp-h{
+    margin-top: 80px;
+    padding-top: 30px;
+}
+
+.help-gif-el{
+    height: 450px;
+    width: auto;
+}
+
 .container-ele{
     top:0;
     bottom:0;
@@ -8,10 +18,6 @@
     background-color: #fcd5d5;
 }
 
-.container-ele{    
-    display: flex;
-}
-
 .form-ele {
     margin-top: 50px;
     margin-left: 120px;
@@ -20,22 +26,26 @@
     width: 80%;
   }
   
-  .form-grp{
+  /* .form-grp{
       margin-top: 10px;
-  }
+  } */
 
 .button-ele{
     margin-top: 10px;
-    border: 2px solid #465283;
+    color: #ffffff;
     width: 100%;
     cursor: pointer;
-    
+    border: none;
+    background-color: #24305e; 
 }
 
 .button-ele:hover{
-    background-color: #405092;
+    border: none;
+    background-color: #24305e; 
+    color: #fbe9a1;
 }
 
 .form-Control-el{
-    border: 2px solid #24305e;
+    background-color: transparent;
+    border: 1px solid #24305e;
 }
