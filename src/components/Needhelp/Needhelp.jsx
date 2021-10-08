@@ -1,18 +1,45 @@
-import React from 'react'
+import {React, useState} from 'react'
 import './needhelp.css'
 import gif1 from "../../media/gif1.gif"
 import { Button, Form, Col, Image, Row } from "react-bootstrap";
+import axios from 'axios';
 
 const Needhelp = () => {
+    const [help, setHelp] = useState({
+        address1: '',
+        address2: '',
+        city: '',
+        state: '',
+        zip: '',
+        latitude: localStorage.getItem('latitude'),
+        longitude: localStorage.getItem('longitude')
+    })
+
+    const onInputChange = e => {
+        setHelp({ ...help, [e.target.name]: e.target.value })
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        await axios.post("http://localhost:9002/Needhelp", help);
+        setHelp({
+            address1: '',
+            address2: '',
+            city: '',
+            state: '',
+            zip: '',
+        })
+    }
+
     return (
         <div className="container-ele">
-            <h1 className="needhelp-h">Need help?</h1>
-            <p>When you are walking down the street, is there someone who is hungry?
+            <p className="needhelp-h">Need help?</p>
+            <p className="needhelp-txt lead">When you are walking down the street, is there someone who is hungry?
                 <br></br>We will be really happy to send help in the form of food to that person
                 <br></br>Please drop in the address of that place
                 <br></br>Remember, you are awesome and you did an amazing job helping us with our goal of #FeedIndia
             </p>
-            <Row>
+            <Row className="needhelp-row">
                 <Col lg={4}>
                     <div className="img-container" >
                         <Image src={gif1} className="help-gif-el" alt="GIF here" />
@@ -20,56 +47,46 @@ const Needhelp = () => {
                 </Col>
                 <Col lg={8}>
                     <div className="form-container">
-                        <Form className="form-ele needhelp-el">
+                        <Form className="form-ele needhelp-el" onSubmit={e => onSubmit(e)}>
+                            <Form.Group className="address1-el form-grp" controlId="formGridAddress1">
+                                <Form.Label>Address line-1</Form.Label>
+                                <Form.Control onChange={e => onInputChange(e)} value={help.address1} name="address1" type="address1"  className="form-Control-el" placeholder="1234 Main St" />
+                            </Form.Group>
 
-                            <div className="container-2">
 
-                                <Form.Group className="address1-el form-grp" controlId="formGridAddress1">
-                                    <Form.Label>Address line-1</Form.Label>
-                                    <Form.Control className="form-Control-el" placeholder="1234 Main St" />
+                            <Form.Group className="address2-el form-grp" controlId="formGridAddress2">
+                                <Form.Label>Address line-2</Form.Label>
+                                <Form.Control onChange={e => onInputChange(e)} value={help.address2} name="address2" type="address2" className="form-Control-el" placeholder="Apartment, studio, or floor" />
+                            </Form.Group>
+
+
+                            <Row className="row-el">
+
+                                <Form.Group className="form-grp" as={Col} controlId="formGridCity">
+                                    <Form.Label>City</Form.Label>
+                                    <Form.Control onChange={e => onInputChange(e)} value={help.city} name="city" type="city" className="form-Control-el" />
                                 </Form.Group>
-                            </div>
 
-                            <div className="container-2">
 
-                                <Form.Group className="address2-el form-grp" controlId="formGridAddress2">
-                                    <Form.Label>Address line-2</Form.Label>
-                                    <Form.Control className="form-Control-el" placeholder="Apartment, studio, or floor" />
+                                <Form.Group className="form-grp" as={Col} controlId="formGridState">
+                                    <Form.Label>State</Form.Label>
+                                    <Form.Control onChange={e => onInputChange(e)} value={help.state} name="state" type="state" className="form-Control-el" />
                                 </Form.Group>
 
-                            </div>
 
-                            <div className="container-2">
-                                <Row className="row-el">
+                                <Form.Group className="form-grp" as={Col} controlId="formGridZip">
+                                    <Form.Label>Zip</Form.Label>
+                                    <Form.Control onChange={e => onInputChange(e)} value={help.zip} name="zip" type="zip" className="form-Control-el" />
+                                </Form.Group>
 
-                                    <Form.Group className="form-grp" as={Col} controlId="formGridCity">
-                                        <Form.Label>City</Form.Label>
-                                        <Form.Control className="form-Control-el" />
-                                    </Form.Group>
-
-
-                                    <Form.Group className="form-grp" as={Col} controlId="formGridState">
-                                        <Form.Label>State</Form.Label>
-                                        <Form.Control className="form-Control-el" />
-                                    </Form.Group>
-
-
-                                    <Form.Group className="form-grp" as={Col} controlId="formGridZip">
-                                        <Form.Label>Zip</Form.Label>
-                                        <Form.Control className="form-Control-el" />
-                                    </Form.Group>
-
-                                </Row>
-                            </div>
-
+                            </Row>
                             <Button className="button-ele btn" variant="primary" type="submit">
-                                Submit
+                                Get my location
                             </Button>
                         </Form>
                     </div>
                 </Col>
             </Row>
-
         </div>
     )
 }

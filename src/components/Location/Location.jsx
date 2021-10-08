@@ -12,8 +12,12 @@ class Location extends Component {
       navigator.geolocation.watchPosition(function(position) {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
-        localStorage.setItem('latitude', position.coords.latitude)
-        localStorage.setItem('longitude', position.coords.longitude)
+        const l1 = position.coords.latitude;
+        const l2 = position.coords.longitude;
+        console.log("L1 is :", l1);
+        console.log("L2 is :", l2);
+        localStorage.setItem('latitude', l1)
+        localStorage.setItem('longitude', l2)
       });
     }
   }

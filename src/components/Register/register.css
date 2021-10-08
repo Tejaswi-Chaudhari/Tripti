@@ -7,8 +7,10 @@
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     border-radius: 8px;
     padding: 1rem;
-    align-items: center;
     text-align: center;
+    margin: auto;
+  text-align: center;
+  margin-top: 80px;
 }
 
 .register > input {
