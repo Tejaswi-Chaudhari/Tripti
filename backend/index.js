@@ -71,14 +71,16 @@ app.post("/Register", async (req, res) => {
 
         const user = await User.findOne({ email }).exec();
 
-        if (user) return res.status(200).json({ message: "User already registred" });
+        if (user)
+
+            return res.status(200).json({ message: "User already registered" });
 
         const newUser = await User.create({
             name,
             email,
             password
         });
-
+        res.send({ message: "Successfully Registered, Please login now." })
         res.status(201).json({
             status: 'success',
             newUser
@@ -86,6 +88,7 @@ app.post("/Register", async (req, res) => {
 
 
     } catch (err) {
+
         res.status(500).json({
             status: 'error',
             message: err
