@@ -9,5 +9,5 @@ export { default as Govtschemes } from './Govtschemes/Govtschemes';
 export { default as Login } from './Login/Login';
 export { default as Homepage } from './Homepage/Homepage';
 export { default as Register } from './Register/Register';
-// export { default as Demo } from './GoogleMap/Demo';
-// export { default as Resume } from './Header/Resume';
+
+

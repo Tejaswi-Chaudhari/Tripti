@@ -21,7 +21,7 @@ const Header = () => {
 
         // we will use async/await to fetch this data
         async function getData() {
-            const res = await fetch("http://localhost:9002/user/:id");
+            const res = await fetch("http://localhost:9002/user/" + "615ed5c951008bf7e41b3c29");
             const data = await res.json();
 
             // store the data into our name variable
