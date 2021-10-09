@@ -42,7 +42,7 @@ const Header = () => {
                             <Nav.Link href="/needhelp" className="nav-txt-rd">Need Help</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">Donate</Nav.Link>
                             <Nav.Link href="/ngos" className="nav-txt-rd">NGOs</Nav.Link>
-                            <Nav.Link href="a" className="nav-txt-rd">Government Schemes</Nav.Link>
+                            <Nav.Link href="/govtschemes" className="nav-txt-rd">Government Schemes</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">Give them a treat</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">For restaurants</Nav.Link>
                             <Button className="btn-login" onClick={() => history.push("/Login")}>Login</Button>
