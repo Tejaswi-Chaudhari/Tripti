@@ -29,6 +29,26 @@ const User = new mongoose.model("User", userSchema)
 
 
 //Routes
+app.get('/', (req, res) => {
+    User.find()
+        .then(users => res.json(users))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+app.param('id', function (req, res, next, id) {
+    user.findById(id, function (err, docs) {
+        if (err) res.json(err);
+        else {
+            req.userId = docs;
+            next();
+        }
+    });
+});
+
+app.get('/user/:id', function (req, res) {
+    res.render('show', { user: req.userId });
+});
+
 app.post("/Login", (req, res) => {
     const { email, password } = req.body
     User.findOne({ email: email }, (err, user) => {
