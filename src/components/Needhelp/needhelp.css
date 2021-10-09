@@ -61,3 +61,10 @@
     background-color: transparent;
     border: 1px solid #24305e;
 }
+
+.needhelp-blob4{
+    height: 300px;
+    position: absolute;
+    margin-left: 150px;
+    opacity: 0.5;
+}

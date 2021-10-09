@@ -1,6 +1,7 @@
 import {React, useState} from 'react'
 import './needhelp.css'
 import gif1 from "../../media/gif1.gif"
+import blob4 from "../../media/blob4.svg"
 import { Button, Form, Col, Image, Row } from "react-bootstrap";
 import axios from 'axios';
 
@@ -33,11 +34,12 @@ const Needhelp = () => {
 
     return (
         <div className="container-ele">
+            <img src={blob4} alt="blob" className="needhelp-blob4"></img>
             <p className="needhelp-h">Need help?</p>
             <p className="needhelp-txt lead">When you are walking down the street, is there someone who is hungry?
                 <br></br>We will be really happy to send help in the form of food to that person
                 <br></br>Please drop in the address of that place
-                <br></br>Remember, you are awesome and you did an amazing job helping us with our goal of #FeedIndia
+                <br></br>Remember, you are awesome and you did an amazing job helping us with our goal of <strong>#FeedIndia</strong>
             </p>
             <Row className="needhelp-row">
                 <Col lg={4}>
