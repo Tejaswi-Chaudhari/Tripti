@@ -12,23 +12,23 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
     const history = useHistory();
-    const [name, setName] = useState(null);
-    const [email, setEmail] = useState(null);
+    // const [name, setName] = useState(null);
+    // const [email, setEmail] = useState(null);
 
-    // + adding the use
-    useEffect(() => {
-        getData();
+    // // + adding the use
+    // useEffect(() => {
+    //     getData();
 
-        // we will use async/await to fetch this data
-        async function getData() {
-            const res = await fetch("http://localhost:9002/user/" + "615ed5c951008bf7e41b3c29");
-            const data = await res.json();
+    //     // we will use async/await to fetch this data
+    //     async function getData() {
+    //         const res = await fetch("http://localhost:9002/user/" + "615ed5c951008bf7e41b3c29");
+    //         const data = await res.json();
 
-            // store the data into our name variable
-            setName(data);
-            setEmail(data);
-        }
-    }, []); // <- you may need to put the setName function in this array
+    //         // store the data into our name variable
+    //         setName(data);
+    //         setEmail(data);
+    //     }
+    // }, []); // <- you may need to put the setName function in this array
 
     return (
         <div>
@@ -47,19 +47,7 @@ const Header = () => {
                             <Nav.Link href="a" className="nav-txt-rd">For restaurants</Nav.Link>
                             <Button className="btn-login" onClick={() => history.push("/Login")}>Login</Button>
                             <h1 className="nav-txt-rd">Heloo</h1>
-                            {name && (
-                                <div className="name">
 
-                                    {/* loop over the name */}
-                                    {name.map((data, index) => (
-                                        <div key={index}>
-                                            <h2>use name is {data.name}</h2>
-                                            <h2>use email is {data.email}</h2>
-                                        </div>
-                                    ))}
-
-                                </div>
-                            )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
