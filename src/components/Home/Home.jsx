@@ -7,6 +7,7 @@ import blob3 from '../../media/blob3.svg'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import CountUp from 'react-countup';
 
 const Home = () => {
 
@@ -27,7 +28,76 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
-         
+
+            {/*  */}
+            <CountUp
+                className="account-balance"
+                start={0}
+                end={450}
+                duration={2.75}
+                separator=" "
+                // decimals={4}
+                // decimal=","
+                // prefix="EUR "
+                // suffix=" left"
+                // onEnd={() => console.log('Ended! 👏')}
+                // onStart={() => console.log('Started! 💨')}
+            >
+                {({ countUpRef, start }) => (
+                    <div>
+                        <span ref={countUpRef} />
+                        {/* <a href="http://" target="_blank" rel="noopener noreferrer"></a> */}
+                        <button onClick={start}>Start</button>
+                    </div>
+                )}
+            </CountUp>
+
+            <CountUp
+                className="account-balance"
+                start={0}
+                end={3650}
+                duration={2.75}
+                // separator=" "
+                // decimals={4}
+                // decimal=","
+                // prefix="EUR "
+                // suffix=" left"
+                // onEnd={() => console.log('Ended! 👏')}
+                // onStart={() => console.log('Started! 💨')}
+            >
+                {({ countUpRef, start }) => (
+                    <div>
+                        <span ref={countUpRef} />
+                        
+                        <button onClick={start}>Start</button>
+                    </div>
+                )}
+            </CountUp>
+
+            <CountUp
+                className="account-balance"
+                start={0}
+                end={1000}
+                duration={2.75}
+                separator=","
+                // decimals={4}
+                // decimal=","
+                // prefix="EUR "
+                // suffix=" left"
+                // onEnd={() => console.log('Ended! 👏')}
+                // onStart={() => console.log('Started! 💨')}
+            >
+                {({ countUpRef, start }) => (
+                    <div>
+                        <span ref={countUpRef} />
+                        {/* <a href="http://" target="_blank" rel="noopener noreferrer"></a> */}
+                        <button onClick={start}>Start</button>
+                    </div>
+                )}
+            </CountUp>
+
+            {/*  */}
+
         </div>
     )
 }
