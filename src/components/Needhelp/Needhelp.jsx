@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import { React, useState } from 'react'
 import './needhelp.css'
 import gif1 from "../../media/gif1.gif"
 import { Button, Form, Col, Image, Row } from "react-bootstrap";
@@ -50,7 +50,7 @@ const Needhelp = () => {
                         <Form className="form-ele needhelp-el" onSubmit={e => onSubmit(e)}>
                             <Form.Group className="address1-el form-grp" controlId="formGridAddress1">
                                 <Form.Label>Address line-1</Form.Label>
-                                <Form.Control onChange={e => onInputChange(e)} value={help.address1} name="address1" type="address1"  className="form-Control-el" placeholder="1234 Main St" />
+                                <Form.Control onChange={e => onInputChange(e)} value={help.address1} name="address1" type="address1" className="form-Control-el" placeholder="1234 Main St" />
                             </Form.Group>
 
 
