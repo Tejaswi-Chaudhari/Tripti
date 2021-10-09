@@ -40,13 +40,13 @@ const Header = () => {
                         <Nav className="nav me-auto">
                             <Nav.Link href="/addfood" className="nav-txt-rd">Add Food</Nav.Link>
                             <Nav.Link href="/needhelp" className="nav-txt-rd">Need Help</Nav.Link>
-                            <Nav.Link href="a" className="nav-txt-rd">Donate</Nav.Link>
+                            <Nav.Link href="/donate" className="nav-txt-rd">Donate</Nav.Link>
                             <Nav.Link href="/ngos" className="nav-txt-rd">NGOs</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">Government Schemes</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">Give them a treat</Nav.Link>
                             <Nav.Link href="a" className="nav-txt-rd">For restaurants</Nav.Link>
                             <Button className="btn-login" onClick={() => history.push("/Login")}>Login</Button>
-                            <h1 className="nav-txt-rd">Heloo</h1>
+
 
                         </Nav>
                     </Navbar.Collapse>
@@ -58,5 +58,22 @@ const Header = () => {
 }
 
 export default Header
+
+
+// <h1 className="nav-txt-rd">Heloo</h1>
+
+// {name && (
+//     <div className="name">
+
+//         {/* loop over the name */}
+//         {name.map((data, index) => (
+//             <div key={index}>
+//                 <h2>use name is {data.name}</h2>
+//                 <h2>use email is {data.email}</h2>
+//             </div>
+//         ))}
+
+//     </div>
+// )}
 
 

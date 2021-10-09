@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Location, Resume, Demo } from './components';
+import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Location, Resume, Demo, Donate } from './components';
 
 // import { useEffect, useState } from 'react';
 
@@ -13,8 +13,10 @@ function App() {
         <Switch>
           <Route exact path="/">
             {/* <Resume /> */}
+
             <Header />
             <Home />
+
             <Location />
             <Footer />
           </Route>
@@ -27,6 +29,11 @@ function App() {
             <Header />
             <Needhelp />
             <div className="space"></div>
+            <Footer />
+          </Route>
+          <Route exact path="/donate">
+            <Header />
+            <Donate />
             <Footer />
           </Route>
           <Route exact path="/ngos">
@@ -44,7 +51,7 @@ function App() {
       </div>
     </Router>
   );
-    
+
 }
 
 export default App;

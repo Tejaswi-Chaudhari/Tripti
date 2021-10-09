@@ -28,19 +28,19 @@ const userSchema = new mongoose.Schema({
 const User = new mongoose.model("User", userSchema)
 
 
-//Routes
-// app.get('/', (req, res) => {
-//     User.find()
-//         .then(users => res.json(users))
-//         .catch(err => res.status(400).json('Error: ' + err));
-// });
+// Routes
+app.get('/', (req, res) => {
+    User.find()
+        .then(users => res.json(users))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
 
-// app.get('/user/:id', (req, res) => {
-//     console.log(res);
-//     User.find({ _id: req.params.id })
-//         .then(users => res.json(users))
-//         .catch(err => res.status(400).json('Error: ' + err));
-// });
+app.get('/user/:id', (req, res) => {
+    console.log(res);
+    User.find({ _id: req.params.id })
+        .then(users => res.json(users))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
 
 
 app.post("/Login", (req, res) => {
