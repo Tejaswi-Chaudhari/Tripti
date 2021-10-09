@@ -7,9 +7,6 @@ import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Loc
 
 
 function App() {
-
-
-
   return (
     <Router>
       <div className="App">
@@ -29,6 +26,7 @@ function App() {
           <Route exact path="/needhelp">
             <Header />
             <Needhelp />
+            <div className="space"></div>
             <Footer />
           </Route>
           <Route exact path="/ngos">
@@ -46,6 +44,7 @@ function App() {
       </div>
     </Router>
   );
+    
 }
 
 export default App;

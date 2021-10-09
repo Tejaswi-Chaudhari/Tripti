@@ -6,6 +6,11 @@
     position: absolute;
     overflow-x: hidden;
 }
+
+.space{
+    height: 200px;
+    background-color: #fcd5d5;
+}
 /* .App {
     display: flex;
     width: 100vw;

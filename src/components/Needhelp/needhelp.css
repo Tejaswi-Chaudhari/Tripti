@@ -1,9 +1,21 @@
+.needhelp-txt{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 350;
+}
 .needhelp-h{
-    margin-top: 80px;
-    padding-top: 30px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #24305e;
+    color: transparent;
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 10px;
+    font-size: 80px;
 }
 
+
 .help-gif-el{
+    margin-left: 50px;
     height: 450px;
     width: auto;
 }
