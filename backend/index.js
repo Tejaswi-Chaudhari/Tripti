@@ -36,17 +36,31 @@ const needhelpSchema = new mongoose.Schema({
     latitude: mongoose.Types.Decimal128
 })
 
+//database schema of treat
+
+const treatSchema = new mongoose.Schema({
+    firstname: String,
+    lastname: String,
+    email: String,
+    reason: String,
+    address: String,
+    
+})
+
 //model
 const User = new mongoose.model("User", userSchema)
 
 //model - needhelp
 const Needhelp = new mongoose.model("Needhelp", needhelpSchema)
 
+//model - treat
+const Treat = new mongoose.model("Treat", treatSchema)
+
 
 // Routes
 app.get('/', (req, res) => {
-    User.find()
-        .then(users => res.json(users))
+    Treat.find()
+        .then(treats => res.json(treats))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -130,10 +144,37 @@ app.post("/Register", async (req, res) => {
             latitude
         });
 
-        newNeedhelp.save()
-            .then(() => res.json('Address added!'))
-            .catch(err => res.status(400).json('Error: ' + err));
+
+       
+    
+            newNeedhelp.save()
+                .then(() => res.json('Address added!'))
+                .catch(err => res.status(400).json('Error: ' + err));
+        })
     })
+        app.post("/Treat", (req, res) => {
+            console.log(req.body);
+            const firstname = req.body.firstname;
+            const lastname = req.body.lastname;
+            const email=req.body.email;
+            const reason = req.body.reason;
+            const address = req.body.address;
+            
+            
+    
+            const newTreat = new Treat({
+                firstname,
+                lastname,
+                email,
+                reason,
+                address
+                
+            });
+
+        newTreat.save()
+            .then(() => res.json('Donor added!'))
+            .catch(err => res.status(400).json('Error: ' + err));
+    
 
 
 })

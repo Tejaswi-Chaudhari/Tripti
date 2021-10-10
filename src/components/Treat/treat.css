@@ -13,7 +13,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 20px;
-    border: 7px solid #24305e;
+    border: 5px solid #24305e;
     /* background-image: linear-gradient( to right, #a8d0e6
     ,#86bfdf); */
     background-color: rgb(255, 255, 255);
@@ -40,4 +40,11 @@
     font-size: medium;
     width: 60%;
     margin:auto;
+}
+
+.button-elemt{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    
+   
 }
