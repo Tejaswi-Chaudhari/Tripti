@@ -29,24 +29,24 @@ const Home = () => {
                 </Row>
             </Container>
 
-            {/*  */}
+            {/*             
             <CountUp
                 className="account-balance"
                 start={0}
                 end={450}
                 duration={2.75}
                 separator=" "
-                // decimals={4}
-                // decimal=","
-                // prefix="EUR "
-                // suffix=" left"
-                // onEnd={() => console.log('Ended! 👏')}
-                // onStart={() => console.log('Started! 💨')}
+                decimals={4}
+                decimal=","
+                prefix="EUR "
+                suffix=" left"
+                onEnd={() => console.log('Ended! 👏')}
+                onStart={() => console.log('Started! 💨')}
             >
                 {({ countUpRef, start }) => (
                     <div>
                         <span ref={countUpRef} />
-                        {/* <a href="http://" target="_blank" rel="noopener noreferrer"></a> */}
+                        <a href="http://" target="_blank" rel="noopener noreferrer"></a>
                         <button onClick={start}>Start</button>
                     </div>
                 )}
@@ -57,13 +57,13 @@ const Home = () => {
                 start={0}
                 end={3650}
                 duration={2.75}
-                // separator=" "
-                // decimals={4}
-                // decimal=","
-                // prefix="EUR "
-                // suffix=" left"
-                // onEnd={() => console.log('Ended! 👏')}
-                // onStart={() => console.log('Started! 💨')}
+                separator=" "
+                decimals={4}
+                decimal=","
+                prefix="EUR "
+                suffix=" left"
+                onEnd={() => console.log('Ended! 👏')}
+                onStart={() => console.log('Started! 💨')}
             >
                 {({ countUpRef, start }) => (
                     <div>
@@ -80,23 +80,23 @@ const Home = () => {
                 end={1000}
                 duration={2.75}
                 separator=","
-                // decimals={4}
-                // decimal=","
-                // prefix="EUR "
-                // suffix=" left"
-                // onEnd={() => console.log('Ended! 👏')}
-                // onStart={() => console.log('Started! 💨')}
+                decimals={4}
+                decimal=","
+                prefix="EUR "
+                suffix=" left"
+                onEnd={() => console.log('Ended! 👏')}
+                onStart={() => console.log('Started! 💨')}
             >
                 {({ countUpRef, start }) => (
                     <div>
                         <span ref={countUpRef} />
-                        {/* <a href="http://" target="_blank" rel="noopener noreferrer"></a> */}
+                        <a href="http://" target="_blank" rel="noopener noreferrer"></a>
                         <button onClick={start}>Start</button>
                     </div>
                 )}
-            </CountUp>
+            </CountUp> */}
 
-            {/*  */}
+
 
         </div>
     )

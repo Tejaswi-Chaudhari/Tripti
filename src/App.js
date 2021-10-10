@@ -1,8 +1,10 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Location, Resume, Demo, Treat } from './components';
-import {Govtschemes} from './components';
+import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Location, Resume, Demo, Treat, Govtschemes, Donate  } from './components';
+
+
+
 
 
 // import { useEffect, useState } from 'react';
@@ -15,10 +17,11 @@ function App() {
         <Switch>
 
           <Route exact path="/">
-            {/* <Resume /> */}
+
             <Header />
-            
+
             <Home />
+
             <Location />
             <Footer />
           </Route>
@@ -33,6 +36,11 @@ function App() {
             <Header />
             <Needhelp />
             <div className="space"></div>
+            <Footer />
+          </Route>
+          <Route exact path="/donate">
+            <Header />
+            <Donate />
             <Footer />
           </Route>
 
@@ -56,7 +64,7 @@ function App() {
 
           <Route exact path="/"><Header />
           </Route>
-          
+
           <Route exact path="/Login"><Login /></Route>
           <Route exact path="/Register"><Register /></Route>
 
@@ -65,7 +73,7 @@ function App() {
       </div>
     </Router>
   );
-    
+
 }
 
 export default App;

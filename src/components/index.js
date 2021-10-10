@@ -10,5 +10,6 @@ export { default as Treat } from './Treat/Treat';
 export { default as Login } from './Login/Login';
 export { default as Homepage } from './Homepage/Homepage';
 export { default as Register } from './Register/Register';
+export { default as Donate } from './Donate/Donate';
 
 
