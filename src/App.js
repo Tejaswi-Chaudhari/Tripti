@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Location, Resume, Demo } from './components';
+import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Location, Resume, Demo, Treat } from './components';
 import {Govtschemes} from './components';
 
 
@@ -45,6 +45,12 @@ function App() {
           <Route exact path="/govtschemes">
             <Header />
             <Govtschemes />
+            <Footer />
+          </Route>
+
+          <Route exact path="/treat">
+            <Header />
+            <Treat />
             <Footer />
           </Route>
 

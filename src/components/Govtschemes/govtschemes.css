@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
+
 .heading-ele{
     margin-top: 80px;
     padding-top: 30px;
     text-align: center;
+}
+
+.para-el{
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contain-3{
+    display:flex;
+}
+
+.card-scheme{
+    height: 400px;
+    margin: 23px;
+    margin-bottom: 50px;
+    background-color: ;
+}
+
+.car-img{
+    filter: grayscale(50%);
+}
+
+
+.govt-head{
+    font-family: 'Nanum Myeongjo', serif;
 }

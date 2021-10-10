@@ -10,6 +10,9 @@ const Addfood = () => {
             <center>
             <Image src={img1} className="img1-el" alt="image here" />
             </center>
+            <h1 className="add-el">
+                Add your contribution
+            </h1>
             <div id="form-id" className="about">
                 <Form className="form-el form-1 about">
                     <div className="addfood container">
@@ -42,7 +45,7 @@ const Addfood = () => {
 
                     <div className="addfood container">
                         <Form.Group className="checkbox-el form" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="I assure you that food is fresh and edible" />
+                            <Form.Check type="checkbox" label=" I assure you that food is fresh and edible" />
                         </Form.Group>
                     </div>
                     <div className="addfood container">
