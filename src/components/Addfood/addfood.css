@@ -1,3 +1,5 @@
+@import url('https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
+
 /* .addfood{
     margin-top: 10px;
     background-color: #ffffff;
@@ -7,6 +9,10 @@
     border-color: #24305e;
 }
 */
+
+.addfood-map{
+  height: 300px;
+}
 
 .button-el{
   color: white;

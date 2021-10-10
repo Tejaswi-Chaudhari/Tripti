@@ -1,23 +1,9 @@
-.topic{
-    margin-top: 80px;
-    padding-top: 30px;
-    text-align: left;
-}
-.para{
-    padding-top: 40px;
-}
 .image-location{
-    margin-right: 0;
-    width:10px;
-    height: 20px;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 40px;
 }
+
 .leftside{
-    width:70%;
-    margin-left: 0;
+    margin-top: 140px;
 }
-/* img, svg {
-    vertical-align: middle;
-    width: 100px;
-    height: 100px;
-    margin-right: 0;
-} */

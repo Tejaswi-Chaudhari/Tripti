@@ -24,8 +24,23 @@ const userSchema = new mongoose.Schema({
     password: String
 })
 
+//database schema of needhelp
+
+const needhelpSchema = new mongoose.Schema({
+    address1: String,
+    address2: String,
+    city: String,
+    state: String,
+    zip: Number,
+    longitude: mongoose.Types.Decimal128,
+    latitude: mongoose.Types.Decimal128
+})
+
 //model
 const User = new mongoose.model("User", userSchema)
+
+//model - needhelp
+const Needhelp = new mongoose.model("Needhelp", needhelpSchema)
 
 
 // Routes
@@ -58,7 +73,6 @@ app.post("/Login", (req, res) => {
             res.send({ message: "User not registered" })
         }
     })
-    // res.send("Login API working")
 })
 
 app.post("/Register", async (req, res) => {
@@ -94,8 +108,33 @@ app.post("/Register", async (req, res) => {
             message: err
         });
     }
-
 })
+
+app.post("/Needhelp", (req, res) => {
+    console.log(req.body);
+    const address1 = req.body.address1;
+    const address2 = req.body.address2;
+    const city = req.body.city;
+    const state = req.body.state;
+    const zip = Number(req.body.zip);
+    const longitude = mongoose.Types.Decimal128(req.body.longitude);
+    const latitude = mongoose.Types.Decimal128(req.body.latitude);
+
+    const newNeedhelp = new Needhelp({
+        address1,
+        address2,
+        city,
+        state,
+        zip,
+        longitude,
+        latitude
+    });
+
+    newNeedhelp.save()
+        .then(() => res.json('Address added!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+})
+
 app.listen(9002, () => {
     console.log("Be started at port 9002")
 })
