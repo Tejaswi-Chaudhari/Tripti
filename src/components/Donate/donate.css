@@ -1,23 +1,40 @@
-.topic{
-    margin-top: 80px;
-    padding-top: 30px;
-    text-align: left;
-}
-.para{
-    padding-top: 40px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@600&display=swap');
+
 .image-location{
-    margin-right: 0;
-    width:10px;
-    height: 20px;
+
+    height: 600px;
+    margin-top: 80px;
+    margin-left: 40px;
 }
 .leftside{
-    width:70%;
-    margin-left: 0;
+    margin-top: 140px;
 }
-/* img, svg {
-    vertical-align: middle;
-    width: 100px;
-    height: 100px;
-    margin-right: 0;
-} */
+.para{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    margin-top: 50px;
+}
+.para1{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 35px;
+}
+
+.topic1{
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-size: 55px;
+color: #24305e;
+}
+.button1{
+    margin: 12px;
+    margin-top: 36px;
+    margin-left: 0;
+    font-weight: 650;
+    background-color: #24305e;
+    color:white
+}
+.button1:hover{
+    background-color: #b9bfd4;
+}
