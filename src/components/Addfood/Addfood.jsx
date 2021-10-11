@@ -1,11 +1,14 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react'
 import './addfood.css'
 import img1 from "../../media/img1.jpg"
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { Button, Form, Col, Image } from "react-bootstrap";
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
-import {Icon} from 'leaflet'
+import { Icon } from 'leaflet'
 import L from 'leaflet';
+import axios from 'axios'
+import Points from './Points'
+
 
 delete L.Icon.Default.prototype._getIconUrl;
 
@@ -15,27 +18,44 @@ L.Icon.Default.mergeOptions({
     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
 
-const points = () => {
-    
-}
-
 const Addfood = () => {
 
+    const [users, setUsers] = useState([]);
     const l1 = localStorage.getItem('latitude')
     const l2 = localStorage.getItem('longitude')
+    console.log(l1, l2)
+
+    useEffect(() => {
+        loadUsers();
+    }, []);
+
+    const loadUsers = async () => {
+        const result = await axios.get("http://localhost:9002/getneedhelp");
+        setUsers(result.data);
+    }
+    console.log(users)
+
+
     return (<>
-        <MapContainer style={{ height: '75vh' }} center={[l1, l2]} zoom={20} scrollWheelZoom={false}>
+    <p className="addfood-h lead">Select a nearby location to help</p>
+        <MapContainer className="addfood-map" style={{ height: '75vh' }} center={[l1, l2]} zoom={12} scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[l1, l2]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
-                <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
+            {
+                users.map((item) =>
+                    <Points key={item.id} lat={item.latitude} lon={item.longitude} add1={item.address1} add2={item.address2} city={item.city}/>
+                )}
+
         </MapContainer>
-        </>
+    </>
+
+    )
+}
+
+export default Addfood
+
         // <div className="main-container">
         //     <center>
         //     <Image src={img1} className="img1-el" alt="image here" />
@@ -83,7 +103,3 @@ const Addfood = () => {
         //         </Form>
         //     </div>
         // </div>
-    )
-}
-
-export default Addfood

@@ -25,10 +25,13 @@
     background-color: #24305e;
     opacity: 0.8;
     border-color: #ffffff;
-    margin-left: 200px;
+    margin-left: 30px;
 }
 .btn-login:hover{
     background-color: #ffffff;
     border: none;
     color: #000000;
+}
+.nav-whole .nav-c .nav .first {
+    margin-left: 330px;
 }

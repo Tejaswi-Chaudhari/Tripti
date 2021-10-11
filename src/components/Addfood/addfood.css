@@ -10,8 +10,11 @@
 }
 */
 
-.addfood-map{
-  height: 300px;
+.addfood-h{
+  margin-top: 90px;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .button-el{
@@ -32,3 +35,18 @@
   margin-top: 80px;
     padding-top: 30px;
 } 
+
+.form-1{
+    border:5px solid  #24305e;
+    margin-left:50px ;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    
+}
+
+.add-el{
+    color: #24305e;
+    text-align: center;
+}

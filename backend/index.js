@@ -36,24 +36,38 @@ const needhelpSchema = new mongoose.Schema({
     latitude: mongoose.Types.Decimal128
 })
 
+//database schema of treat
+
+const treatSchema = new mongoose.Schema({
+    firstname: String,
+    lastname: String,
+    email: String,
+    reason: String,
+    address: String,
+    
+})
+
 //model
 const User = new mongoose.model("User", userSchema)
 
 //model - needhelp
 const Needhelp = new mongoose.model("Needhelp", needhelpSchema)
 
+//model - treat
+const Treat = new mongoose.model("Treat", treatSchema)
+
 
 // Routes
 app.get('/', (req, res) => {
-    User.find()
-        .then(users => res.json(users))
+    Treat.find()
+        .then(treats => res.json(treats))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-app.get('/user/:id', (req, res) => {
+app.get('/getneedhelp', (req, res) => {
     console.log(res);
-    User.find({ _id: req.params.id })
-        .then(users => res.json(users))
+    Needhelp.find()
+        .then(Needhelp => res.json(Needhelp))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -132,6 +146,57 @@ app.post("/Needhelp", (req, res) => {
 
     newNeedhelp.save()
         .then(() => res.json('Address added!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+    app.post("/Needhelp", (req, res) => {
+        console.log(req.body);
+        const address1 = req.body.address1;
+        const address2 = req.body.address2;
+        const city = req.body.city;
+        const state = req.body.state;
+        const zip = Number(req.body.zip);
+        const longitude = mongoose.Types.Decimal128(req.body.longitude);
+        const latitude = mongoose.Types.Decimal128(req.body.latitude);
+
+        const newNeedhelp = new Needhelp({
+            address1,
+            address2,
+            city,
+            state,
+            zip,
+            longitude,
+            latitude
+        });
+
+
+       
+    
+            newNeedhelp.save()
+                .then(() => res.json('Address added!'))
+                .catch(err => res.status(400).json('Error: ' + err));
+        })
+    })
+
+app.post("/Treat", (req, res) => {
+    console.log(req.body);
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email=req.body.email;
+    const reason = req.body.reason;
+    const address = req.body.address;
+    
+    
+
+    const newTreat = new Treat({
+        firstname,
+        lastname,
+        email,
+        reason,
+        address
+        
+    });
+
+    newTreat.save()
+        .then(() => res.json('Donor added!'))
         .catch(err => res.status(400).json('Error: ' + err));
 })
 
