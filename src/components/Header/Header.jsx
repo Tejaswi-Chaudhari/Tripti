@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
+// import brand from '../../media/Tripti.png'
 
 
 const Header = () => {
@@ -34,7 +34,9 @@ const Header = () => {
         <div>
             <Navbar fixed="top" className="nav-whole">
                 <Container className="nav-c">
-                    <Navbar.Brand href="/" className="nav-brand">Tripti</Navbar.Brand>
+                    <Navbar.Brand href="/" className="nav-brand">
+                        {/* <img src={brand} alt="logo" /> */}Tripti
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="nav me-auto">
