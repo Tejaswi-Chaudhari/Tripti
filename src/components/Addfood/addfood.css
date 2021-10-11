@@ -1,14 +1,6 @@
 @import url('https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
 
-/* .addfood{
-    margin-top: 10px;
-    background-color: #ffffff;
-}
-
-.control-el{
-    border-color: #24305e;
-}
-*/
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 .addfood-h{
   margin-top: 90px;
@@ -49,4 +41,10 @@
 .add-el{
     color: #24305e;
     text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+.para-1-el{
+    text-align: center;
+    font-size: larger;
+    font-style: bold;
 }

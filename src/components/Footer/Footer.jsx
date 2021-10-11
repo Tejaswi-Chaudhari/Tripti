@@ -9,8 +9,11 @@ const Footer = () => {
 
         <footer className="footer">
             <center>
-                <Nav.Link><p className="footer-p-txt">About us</p></Nav.Link>
-                <Nav.Link><p className="footer-p-txt">Contact us</p></Nav.Link>
+     
+                <Nav.Link href="/aboutus">
+                    <p className="footer-p-txt">About us</p>
+                    </Nav.Link>
+                
             </center>
             <p className="footer-txt">Made with <FontAwesomeIcon color="red" icon={faHeart} /> by Tejaswi, Tejashri and Swarangi<br></br>All rights reserved © 2021 Hack Ninjas Team</p>
         </footer>

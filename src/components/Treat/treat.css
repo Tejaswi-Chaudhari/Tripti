@@ -45,6 +45,10 @@
 .button-elemt{
     margin-left: 30px;
     margin-bottom: 30px;
-    
+    background-color: #24305e;
    
+}
+
+.button-elemt:hover{
+    background-color: #374785;
 }
