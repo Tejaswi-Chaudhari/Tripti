@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@600&display=swap');
 
 .ngo-container{
     top:0;
@@ -20,6 +21,8 @@
 }
 
 .ngo-el{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     margin-top: 80px;
     padding-top: 30px;
     text-align: center;
