@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'leaflet/dist/leaflet.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Header, Home, Footer, Addfood, Needhelp, Login, Register, Map, Ngo, Location, Resume, Demo, Treat, Govtschemes, Donate  } from './components';
 
@@ -15,13 +16,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-
           <Route exact path="/">
-
             <Header />
-
             <Home />
-
             <Location />
             <Footer />
           </Route>
@@ -29,7 +26,7 @@ function App() {
           <Route exact path="/addfood">
             <Header />
             <Addfood />
-            <Footer />
+            {/* <Footer /> */}
           </Route>
 
           <Route exact path="/needhelp">
@@ -38,6 +35,7 @@ function App() {
             <div className="space"></div>
             <Footer />
           </Route>
+
           <Route exact path="/donate">
             <Header />
             <Donate />
@@ -62,12 +60,8 @@ function App() {
             <Footer />
           </Route>
 
-          <Route exact path="/"><Header />
-          </Route>
-
           <Route exact path="/Login"><Login /></Route>
           <Route exact path="/Register"><Register /></Route>
-
 
         </Switch>
       </div>

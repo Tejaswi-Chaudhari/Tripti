@@ -29,8 +29,8 @@ const Home = () => {
                 </Row>
             </Container>
 
-            {/*             
-            <CountUp
+            
+            {/* <CountUp
                 className="account-balance"
                 start={0}
                 end={450}
@@ -95,7 +95,6 @@ const Home = () => {
                     </div>
                 )}
             </CountUp> */}
-
 
 
         </div>
