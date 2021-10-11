@@ -2,7 +2,6 @@ import { React, useState, useEffect } from 'react'
 import './addfood.css'
 import img1 from "../../media/img1.jpg"
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { Button, Form, Col, Image } from "react-bootstrap";
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import { Icon } from 'leaflet'
 import L from 'leaflet';
