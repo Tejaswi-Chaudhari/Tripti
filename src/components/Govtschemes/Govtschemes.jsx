@@ -11,7 +11,7 @@ const Govtschemes = () => {
         <div className="main-container">
 
             <div>
-                <Carousel>
+                <Carousel >
                     <Carousel.Item>
                         <img
                             className="car-img d-block w-100"

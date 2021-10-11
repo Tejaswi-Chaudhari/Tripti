@@ -12,7 +12,7 @@ function Donate() {
             <Row>
                 <Col lg={8}>
                     <div className="leftside">
-                        <h1 className="topic1">We need your help💖</h1>
+                        <h1 className="topic1">We need your help.</h1>
                         <h6 className="para">
                             As a nonprofit,we rely on donations to provide food and the kind of health care kids deserve: highly specialized,compassinate,family-centered and customized to the special health needs of children.
                         </h6>
@@ -24,7 +24,7 @@ function Donate() {
                             <button type="button" className="btn btn-info button1">Donate Now</button>
                         </a>
                         <a href="https://celo-crypocurrency-demo.vercel.app/">
-                            <button type="button" className="btn btn-info button1">$Bitcoin Donation</button>
+                            <button type="button" className="btn btn-info button1">Celo Donation</button>
                         </a>
                     </div>
                 </Col>

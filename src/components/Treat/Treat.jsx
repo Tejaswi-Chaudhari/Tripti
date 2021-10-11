@@ -22,6 +22,7 @@ const Treat = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.post("http://localhost:9002/Treat", treat);
+        alert('Submitted successfully')
         setTreat({
             firstname: '',
             lastname: '',
@@ -89,7 +90,9 @@ const Treat = () => {
                     />
                 </FloatingLabel>
 
-                <Button className="button-elemt" variant="primary" type="submit">
+                <Button className="button-elemt" variant="primary" type="submit"
+                    
+                >
                     Submit
                 </Button>
 
