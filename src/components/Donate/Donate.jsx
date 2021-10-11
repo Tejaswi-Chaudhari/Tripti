@@ -24,7 +24,7 @@ function Donate() {
                             <button type="button" className="btn btn-info button1">Donate Now</button>
                         </a>
                         <a href="https://celo-crypocurrency-demo.vercel.app/">
-                            <button type="button" className="btn btn-info button1">$Bitcoin Donation</button>
+                            <button type="button" className="btn btn-info button1">Celo Donation</button>
                         </a>
                     </div>
                 </Col>
