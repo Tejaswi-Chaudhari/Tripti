@@ -74,23 +74,6 @@ app.get('/getneedhelp', (req, res) => {
 });
 
 
-// app.post("/Login", (req, res) => {
-//     const { email, password } = req.body
-//     User.findOne({ email: email }, (err, user) => {
-//         if (user) {
-//             if (password === user.password) {
-//                 res.send({ message: "Login Successful", user: user })
-//             }
-//             else {
-//                 res.send({ message: "Password didn't match" })
-//             }
-//         }
-//         else {
-//             res.send({ message: "User not registered" })
-//         }
-//     })
-// })
-
 const register = (req, res, next) => {
     bcryptjs.hash(req.body.password, 10, function (err, hashedPass) {
         if (err) {
@@ -154,40 +137,6 @@ const login = (req, res, next) => {
 }
 
 app.post('/Login', login)
-// app.post("/Register", async (req, res) => {
-//     console.log(req.body);
-//     try {
-
-//         const name = req.body.name;
-//         const email = req.body.email;
-//         const password = hashedPass;
-
-//         const user = await User.findOne({ email }).exec();
-
-//         if (user)
-
-//             return res.status(200).json({ message: "User already registered" });
-
-//         const newUser = await User.create({
-//             name,
-//             email,
-//             password
-//         });
-//         res.send({ message: "Successfully Registered, Please login now." })
-//         res.status(201).json({
-//             status: 'success',
-//             newUser
-//         })
-
-
-//     } catch (err) {
-
-//         res.status(500).json({
-//             status: 'error',
-//             message: err
-//         });
-//     }
-// })
 
 app.post("/Needhelp", (req, res) => {
     console.log(req.body);
@@ -232,9 +181,6 @@ app.post("/Needhelp", (req, res) => {
             latitude
         });
 
-
-
-
         newNeedhelp.save()
             .then(() => res.json('Address added!'))
             .catch(err => res.status(400).json('Error: ' + err));
@@ -248,8 +194,6 @@ app.post("/Treat", (req, res) => {
     const email = req.body.email;
     const reason = req.body.reason;
     const address = req.body.address;
-
-
 
     const newTreat = new Treat({
         firstname,

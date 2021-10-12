@@ -32,7 +32,7 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar fixed="top" className="nav-whole">
+            <Navbar expand="lg" fixed="top" className="navbar nav-whole">
                 <Container className="nav-c">
                     <Navbar.Brand href="/" className="nav-brand">
                         {/* <img src={brand} alt="logo" /> */}Tripti

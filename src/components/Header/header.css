@@ -35,3 +35,13 @@
 .nav-whole .nav-c .nav .first {
     margin-left: 330px;
 }
+
+@media screen and (max-width: 767px){
+    .nav-whole .nav-c .nav .first, .nav-whole .nav-c .nav .nav-txt-rd {
+        text-align: center;
+        margin: auto;
+    }
+    .btn-login{
+        margin: auto;
+    }
+}
