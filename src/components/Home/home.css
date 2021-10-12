@@ -59,6 +59,7 @@
     }
 }
 body{margin-top:20px;}
+
 .line-steps {
     display: flex;
     justify-content: center;
@@ -115,7 +116,7 @@ body{margin-top:20px;}
 
 .line-steps .line-content .inner-circle:before {
     content: "";
-    background-color: #24305e;
+    background-color: #f58a85;
     display: inline-block;
     height: 3rem;
     width: 3rem;

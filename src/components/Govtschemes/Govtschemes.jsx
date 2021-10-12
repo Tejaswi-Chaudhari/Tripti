@@ -55,7 +55,7 @@ const Govtschemes = () => {
 
             <div className="contain-2">
                 <p className="para-el">
-                    India accords high priority to the issue of hunger and malnutrition and is implementing several schemes to improve food situation in the country. India is using technology and data to solve its acute malnutrition and hunger problems. The Food and Agriculture Organization (FAO) estimates that 194.4 million people in India (about 14.5% of the total population) are undernourished. The government has accorded high priority to the issue of undernutrition and is implementing  several programmes which have potential to improve the current nutritional situation in India. Some of them are as follows:
+                    India accords high priority to the issue of hunger and malnutrition and is implementing several schemes to improve food situation in the country. India is using technology and data to solve its acute malnutrition and hunger problems. The Food and Agriculture Organization (FAO) estimates that 194.4 million people in India (about 14% of the total population) are undernourished. The government has accorded high priority to the issue of undernutrition and is implementing  several programmes which have potential to improve the current nutritional situation in India. Some of them are as follows:
 
 
                 </p>

@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import CountUp from 'react-countup';
 
- 
+
 
 const Home = () => {
 
@@ -32,50 +32,50 @@ const Home = () => {
             </Container>
 
             <div>
-            <div class="container">                      
-    <div class="row ">
-        <div class="col-xl-6 col-lg-8 line-div">
-            <h2 class="head-text">Key facts about hunger in India</h2>
-            
-        </div>
-    </div>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-xl-6 col-lg-8 line-div">
+                            <h2 class="head-text">Key facts about hunger in India</h2>
 
-    <div class="row">
-        <div class="col">
-            <div class="line-steps ">
-                <div class="line-step">
-                    <div class="line-content">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">14%</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Total population is undernourished</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="line-steps ">
+                                <div class="line-step">
+                                    <div class="line-content">
+                                        <div class="inner-circle"></div>
+                                        <p class="h6 mt-3 mb-1">14%</p>
+                                        <p class="h6 text-muted mb-0 mb-lg-0">Total population is undernourished</p>
+                                    </div>
+                                </div>
+                                <div class="line-step">
+                                    <div class="line-content">
+                                        <div class="inner-circle"></div>
+                                        <p class="h6 mt-3 mb-1">20%</p>
+                                        <p class="h6 text-muted mb-0 mb-lg-0">Children under 5 are underweight</p>
+                                    </div>
+                                </div>
+                                <div class="line-step">
+                                    <div class="line-content">
+                                        <div class="inner-circle"></div>
+                                        <p class="h6 mt-3 mb-1">34.7%</p>
+                                        <p class="h6 text-muted mb-0 mb-lg-0">Children under 5 years of age are stunted</p>
+                                    </div>
+                                </div>
+                                <div class="line-step">
+                                    <div class="line-content">
+                                        <div class="inner-circle"></div>
+                                        <p class="h6 mt-3 mb-1">51.4%</p>
+                                        <p class="h6 text-muted mb-0 mb-lg-0">Women in the reproductive age are anaemic</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="line-step">
-                    <div class="line-content">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">20%</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Children under 5 are underweight</p>
-                    </div>
-                </div>
-                <div class="line-step">
-                    <div class="line-content">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">34.7%</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Children under 5 years of age are stunted</p>
-                    </div>
-                </div>
-                <div class="line-step">
-                    <div class="line-content">
-                        <div class="inner-circle"></div>
-                        <p class="h6 mt-3 mb-1">51.4%</p>
-                        <p class="h6 text-muted mb-0 mb-lg-0">Women in the reproductive age are anaemic</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
             </div>
 
         </div>
