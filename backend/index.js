@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
-import env from "dotenv"
+import { } from 'dotenv/config'
 
 import bcryptjs from "bcryptjs"
 import jwt from "jsonwebtoken"
@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 
-const uri = "mongodb+srv://hackninjas:wtGG4kU5mAHfgXSz@cluster0.yspj4.mongodb.net/test?retryWrites=true&w=majority"
+const uri = process.env.ATLAS_URI;
 
 mongoose.connect(uri, {
     useUnifiedTopology: true
@@ -71,6 +71,14 @@ app.get('/getneedhelp', (req, res) => {
     Needhelp.find()
         .then(Needhelp => res.json(Needhelp))
         .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
+//delete entry
+app.delete('/delete/:id', (req, res) => {
+    Needhelp.findByIdAndDelete(req.params.id)
+        .then(needhelp => res.json(needhelp))
+        .catch(err => res.status(400).json('Error:' + err));
 });
 
 
@@ -161,30 +169,7 @@ app.post("/Needhelp", (req, res) => {
     newNeedhelp.save()
         .then(() => res.json('Address added!'))
         .catch(err => res.status(400).json('Error: ' + err));
-    app.post("/Needhelp", (req, res) => {
-        console.log(req.body);
-        const address1 = req.body.address1;
-        const address2 = req.body.address2;
-        const city = req.body.city;
-        const state = req.body.state;
-        const zip = Number(req.body.zip);
-        const longitude = mongoose.Types.Decimal128(req.body.longitude);
-        const latitude = mongoose.Types.Decimal128(req.body.latitude);
 
-        const newNeedhelp = new Needhelp({
-            address1,
-            address2,
-            city,
-            state,
-            zip,
-            longitude,
-            latitude
-        });
-
-        newNeedhelp.save()
-            .then(() => res.json('Address added!'))
-            .catch(err => res.status(400).json('Error: ' + err));
-    })
 })
 
 app.post("/Treat", (req, res) => {

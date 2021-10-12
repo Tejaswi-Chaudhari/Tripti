@@ -36,7 +36,7 @@ const Addfood = () => {
 
 
     return (<>
-    <p className="addfood-h lead">Select a nearby location to help</p>
+        <p className="addfood-h lead">Select a nearby location to help</p>
         <MapContainer className="addfood-map" style={{ height: '75vh' }} center={[l1, l2]} zoom={12} scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -44,7 +44,7 @@ const Addfood = () => {
             />
             {
                 users.map((item) =>
-                    <Points key={item.id} lat={item.latitude} lon={item.longitude} add1={item.address1} add2={item.address2} city={item.city}/>
+                    <Points key={item.id} lat={item.latitude} lon={item.longitude} add1={item.address1} add2={item.address2} city={item.city} id={item._id} />
                 )}
 
         </MapContainer>
