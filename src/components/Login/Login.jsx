@@ -27,7 +27,7 @@ const Login = () => {
                 const token = res.data.token;
                 sessionStorage.setItem('token', token)
                 console.log(token)
-                history.push("/")
+                window.location.reload(history.push("/"))
             }
             )
     }
