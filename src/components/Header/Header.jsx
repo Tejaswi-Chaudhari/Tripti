@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 
 const Header = ({auth}) => {
     const history = useHistory();
+    console.log(auth)
     // const [name, setName] = useState(null);
     // const [email, setEmail] = useState(null);
 
@@ -30,6 +31,13 @@ const Header = ({auth}) => {
     //     }
     // }, []); // <- you may need to put the setName function in this array
 
+    const action = () => {
+        console.log(sessionStorage.getItem('token'))
+        sessionStorage.removeItem('token')
+        console.log(sessionStorage.getItem('token'))
+        history.push("/Login")
+    }
+
     return (
         <div>
             <Navbar expand="lg" fixed="top" className="navbar nav-whole">
@@ -40,16 +48,16 @@ const Header = ({auth}) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="nav me-auto">
-                            <Nav.Link href={auth ? "/login" : "/addfood"} className="nav-txt-rd first">Add Food</Nav.Link>
-                            <Nav.Link href={auth ? "/login" : "/needhelp"} className="nav-txt-rd">Need Help</Nav.Link>
-                            <Nav.Link href={auth ? "/login" : "/donate"} className="nav-txt-rd">Donate</Nav.Link>
-                            <Nav.Link href={auth ? "/login" : "/ngos"} className="nav-txt-rd">NGOs</Nav.Link>
-                            <Nav.Link href={auth ? "/login" : "/govtschemes"} className="nav-txt-rd">Government Schemes</Nav.Link>
-                            <Nav.Link href={auth ? "/login" : "/treat"} className="nav-txt-rd">Give them a treat</Nav.Link>
+                            <Nav.Link href={auth ?"/addfood" : "/login" } className="nav-txt-rd first">Add Food</Nav.Link>
+                            <Nav.Link href={auth ? "/needhelp" : "/login"} className="nav-txt-rd">Need Help</Nav.Link>
+                            <Nav.Link href={auth ? "/donate" : "/login"} className="nav-txt-rd">Donate</Nav.Link>
+                            <Nav.Link href={auth ? "/ngos" : "/login"} className="nav-txt-rd">NGOs</Nav.Link>
+                            <Nav.Link href={auth ? "/govtschemes" : "/login"} className="nav-txt-rd">Government Schemes</Nav.Link>
+                            <Nav.Link href={auth ? "/treat" : "/login"} className="nav-txt-rd">Give them a treat</Nav.Link>
 
                            
                             
-                            <Button className="btn-login" onClick={() => history.push("/Login")}>{auth ? "Login" : "Logout"}</Button>
+                            <Button className="btn-login" onClick={action}>{auth ? "Logout" : "Login"}</Button>
                             {/* <h1 className="nav-txt-rd">Heloo</h1> */}
 
 

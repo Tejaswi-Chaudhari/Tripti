@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useEffect } from 'react'
 import './home.css'
 import home1 from '../../media/Home.gif'
 import blob1 from '../../media/blob1.svg'
