@@ -116,7 +116,7 @@ const login = (req, res, next) => {
                         })
                     }
                     if (result) {
-                        let token = jwt.sign({ name: user.name }, 'verySecretValue', { expiresIn: '1h' })
+                        let token = jwt.sign({ name: user.name }, 'Hcgx)*(fn', { expiresIn: '1h' })
                         res.json({
                             message: 'Login Succesful!',
                             token: token
@@ -137,6 +137,21 @@ const login = (req, res, next) => {
 }
 
 app.post('/Login', login)
+
+const authenticate = (reeq, res, next) => {
+    try{
+        const token = req.headers.authorization.split(' ')[1]
+        const decode = jwt.verify(token, 'Hcgx)*(fn')
+
+        req.user = decode
+        next()
+    }
+    catch(error){
+        res.json({
+            message: 'Authentication failed!'
+        })
+    }
+}
 
 app.post("/Needhelp", (req, res) => {
     console.log(req.body);

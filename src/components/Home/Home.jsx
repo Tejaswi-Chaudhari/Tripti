@@ -21,7 +21,7 @@ const Home = () => {
             <Container>
                 <Row>
                     <Col className="home-left">
-                        <h1 className="home-h">WELCOME</h1>
+                        <h1 className="home-h">Tripti</h1>
                         <p className="home-txt">We strongly believe that food is a <strong>Necessity</strong> and not a <strong>luxury</strong></p>
                         <p className="home-txt1">We are glad that you joined us in our mission to <strong>#FeedIndia</strong></p>
                     </Col>

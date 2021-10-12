@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 // import brand from '../../media/Tripti.png'
 
 
-const Header = () => {
+const Header = ({auth}) => {
     const history = useHistory();
     // const [name, setName] = useState(null);
     // const [email, setEmail] = useState(null);
@@ -40,16 +40,16 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="nav me-auto">
-                            <Nav.Link href="/addfood" className="nav-txt-rd first">Add Food</Nav.Link>
-                            <Nav.Link href="/needhelp" className="nav-txt-rd">Need Help</Nav.Link>
-                            <Nav.Link href="/donate" className="nav-txt-rd">Donate</Nav.Link>
-                            <Nav.Link href="/ngos" className="nav-txt-rd">NGOs</Nav.Link>
-                            <Nav.Link href="/govtschemes" className="nav-txt-rd">Government Schemes</Nav.Link>
-                            <Nav.Link href="/treat" className="nav-txt-rd">Give them a treat</Nav.Link>
+                            <Nav.Link href={auth ? "/login" : "/addfood"} className="nav-txt-rd first">Add Food</Nav.Link>
+                            <Nav.Link href={auth ? "/login" : "/needhelp"} className="nav-txt-rd">Need Help</Nav.Link>
+                            <Nav.Link href={auth ? "/login" : "/donate"} className="nav-txt-rd">Donate</Nav.Link>
+                            <Nav.Link href={auth ? "/login" : "/ngos"} className="nav-txt-rd">NGOs</Nav.Link>
+                            <Nav.Link href={auth ? "/login" : "/govtschemes"} className="nav-txt-rd">Government Schemes</Nav.Link>
+                            <Nav.Link href={auth ? "/login" : "/treat"} className="nav-txt-rd">Give them a treat</Nav.Link>
 
                            
                             
-                            <Button className="btn-login" onClick={() => history.push("/Login")}>Login</Button>
+                            <Button className="btn-login" onClick={() => history.push("/Login")}>{auth ? "Login" : "Logout"}</Button>
                             {/* <h1 className="nav-txt-rd">Heloo</h1> */}
 
 
