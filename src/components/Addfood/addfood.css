@@ -1,6 +1,6 @@
 @import url('https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); */
 
 .addfood-h{
   margin-top: 90px;
@@ -8,7 +8,7 @@
   font-weight: 400;
   text-align: center;
 }
-
+/* 
 .button-el{
   color: white;
   border-color:#24305e;
@@ -47,4 +47,4 @@
     text-align: center;
     font-size: larger;
     font-style: bold;
-}
+} */
