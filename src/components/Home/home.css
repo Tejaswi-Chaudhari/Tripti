@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
 .home-h{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #f76c6c;
@@ -42,3 +45,77 @@
     opacity: 0.5;
 }
 
+body{margin-top:20px;}
+.line-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.head-text{
+  text-align:center;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+.line-steps .line-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+@media (min-width:768px) {
+    .line-steps .line-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #24305e;
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+    .line-steps .line-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #24305e;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
+}
+
+.line-steps .line-content {
+    width: 10rem;
+    text-align: center
+}
+
+.line-steps .line-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24305e
+}
+
+.line-steps .line-content .inner-circle:before {
+    content: "";
+    background-color: #24305e;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5
+}
+
+.line-div{
+    display: block;
+    justify-content: center;
+    margin: auto;
+
+}

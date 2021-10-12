@@ -9,6 +9,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import CountUp from 'react-countup';
 
+ 
+
 const Home = () => {
 
     return (
@@ -29,73 +31,52 @@ const Home = () => {
                 </Row>
             </Container>
 
+            <div>
+            <div class="container">                      
+    <div class="row ">
+        <div class="col-xl-6 col-lg-8 line-div">
+            <h2 class="head-text">Key facts about hunger in India</h2>
             
-            {/* <CountUp
-                className="account-balance"
-                start={0}
-                end={450}
-                duration={2.75}
-                separator=" "
-                decimals={4}
-                decimal=","
-                prefix="EUR "
-                suffix=" left"
-                onEnd={() => console.log('Ended! 👏')}
-                onStart={() => console.log('Started! 💨')}
-            >
-                {({ countUpRef, start }) => (
-                    <div>
-                        <span ref={countUpRef} />
-                        <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-                        <button onClick={start}>Start</button>
-                    </div>
-                )}
-            </CountUp>
+        </div>
+    </div>
 
-            <CountUp
-                className="account-balance"
-                start={0}
-                end={3650}
-                duration={2.75}
-                separator=" "
-                decimals={4}
-                decimal=","
-                prefix="EUR "
-                suffix=" left"
-                onEnd={() => console.log('Ended! 👏')}
-                onStart={() => console.log('Started! 💨')}
-            >
-                {({ countUpRef, start }) => (
-                    <div>
-                        <span ref={countUpRef} />
-                        
-                        <button onClick={start}>Start</button>
+    <div class="row">
+        <div class="col">
+            <div class="line-steps ">
+                <div class="line-step">
+                    <div class="line-content">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1">14%</p>
+                        <p class="h6 text-muted mb-0 mb-lg-0">Total population is undernourished</p>
                     </div>
-                )}
-            </CountUp>
-
-            <CountUp
-                className="account-balance"
-                start={0}
-                end={1000}
-                duration={2.75}
-                separator=","
-                decimals={4}
-                decimal=","
-                prefix="EUR "
-                suffix=" left"
-                onEnd={() => console.log('Ended! 👏')}
-                onStart={() => console.log('Started! 💨')}
-            >
-                {({ countUpRef, start }) => (
-                    <div>
-                        <span ref={countUpRef} />
-                        <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-                        <button onClick={start}>Start</button>
+                </div>
+                <div class="line-step">
+                    <div class="line-content">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1">20%</p>
+                        <p class="h6 text-muted mb-0 mb-lg-0">Children under 5 are underweight</p>
                     </div>
-                )}
-            </CountUp> */}
-
+                </div>
+                <div class="line-step">
+                    <div class="line-content">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1">34.7%</p>
+                        <p class="h6 text-muted mb-0 mb-lg-0">Children under 5 years of age are stunted</p>
+                    </div>
+                </div>
+                <div class="line-step">
+                    <div class="line-content">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1">51.4%</p>
+                        <p class="h6 text-muted mb-0 mb-lg-0">Women in the reproductive age are anaemic</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
 
         </div>
     )
